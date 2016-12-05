@@ -1,7 +1,7 @@
 {
 "version": 3,
 "mappings": "AAUA,iBAAkB,CAChB,SAAS,CAAE,GAAG,CAGhB,IAAI,CACF,KAAK,CATG,eAAgB,CAUxB,gBAAgB,CAXR,eAAgB,CAc1B,4BAA6B,CAC3B,KAAK,CAhBG,eAAiB,CAoBzB,MAAG,CACD,YAAY,CArBN,eAAiB,CAyB3B,CAAE,CACA,KAAK,CA1BG,eAAiB,CA6B3B,cAAgB,CACd,KAAK,CA5BG,eAAgB",
-"sources": ["../scss/accessibility.highcontrast.scss"],
+"sources": ["../scss/highcontrast.scss"],
 "names": [],
-"file": "accessibility.highcontrast.css"
+"file": "highcontrast.css"
 }
