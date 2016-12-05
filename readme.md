@@ -1,3 +1,3 @@
 # Accessibility toolbox
 
-Check readme.html file to see example of use.
+Check example of use: https://r4fx.github.io/accessibility-toolbox/
