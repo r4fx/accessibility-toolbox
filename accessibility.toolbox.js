@@ -124,7 +124,7 @@ var accessibility = {
 
     init: function () {
         this.tabMenu();
-        this.hoveredMenu();
+        //this.hoveredMenu();
     }
 };
 
