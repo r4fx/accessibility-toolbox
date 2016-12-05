@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Accessibility toolbox</title>
+
+    <link rel="stylesheet" href="styles/css/readme.css">
+    <link rel="stylesheet" href="styles/css/accessibility.toolbox.css">
+    <link rel="stylesheet alternate" href="styles/css/accessibility.highcontrast.css" media="all" title="highcontrast">
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+    <script src="accessibility.toolbox.js"></script>
+</head>
+<body>
+    <ul id="accessibility-tab-menu">
+        <li><a href="#accessible-main-nav">Main menu</a></li>
+        <li><a href="#accessible-content">Go to content</a></li>
+        <li><a href="#accessible-footer-nav">Footer</a></li>
+    </ul>
+
+    <nav>
+        <ul id="accessible-main-nav" class="inline-center">
+            <li><a href="#">Header link 1</a></li>
+            <li><a href="#">Header link 2</a></li>
+            <li><a href="#">Header link 3</a></li>
+            <li>
+                <button type="button" data-theme-switcher="highcontrast" data-contrast="toggle">&#9728;</button>
+            </li>
+        </ul>
+    </nav>
+
+    <h1 class="inline-center">Accessibility toolbox</h1>
+
+    <main>
+        <ul class="instruction">
+            <li>Press Tab key on start to see "quick tab menu", then press Enter key to use tab nav.</li>
+            <li>Press on the sun button to switch view to high contrast mode. After that press Cmd/Ctrl + R to refresh the view and see remembered mode.</li>
+        </ul>
+
+        <div class="page-content" id="accessible-content">
+            <p>Pede lacinia magnam earum commodi, enim montes dolor, incididunt ipsum tincidunt consectetuer, nibh porttitor, adipisci dis proident mus imperdiet consectetuer.
+
+                Laboriosam velit platea vivamus dis ipsam, magna parturient aut tortor rhoncus. Congue velit consequatur corporis inceptos, reprehenderit tempora mus, adipisicing.
+
+                Ornare? Voluptates quae molestie montes hac morbi commodi saepe diam veniam viverra distinctio augue voluptatem ornare, ex ab sequi harum.
+
+                Fusce cum, nunc incidunt atque qui nisi reprehenderit ullamcorper bibendum necessitatibus phasellus accumsan fugit dis orci diamlorem sem at. Posuere.
+
+                Tempore pede platea mus aliquip phasellus, parturient deleniti adipisicing urna? Lorem luctus orci dolorem alias cubilia, minim quisque, fugit, pulvinar.</p>
+        </div>
+    </main>
+
+    <footer>
+        <nav>
+            <ul id="accessible-footer-nav" class="inline-center">
+                <li><a href="#">Footer link 1</a></li>
+                <li><a href="#">Footer link 2</a></li>
+                <li><a href="#">Footer link 3</a></li>
+            </ul>
+        </nav>
+
+        <p class="inline-center">
+            <small>made by <a href="https://github.com/r4fx" target="_blank">r4fx</a></small>
+        </p>
+    </footer>
+</body>
+</html>

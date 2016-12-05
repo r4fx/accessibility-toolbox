@@ -1,0 +1,36 @@
+// ---------------------------------------------------------
+// BASE VARIABLES
+// ---------------------------------------------------------
+
+$yellow:  yellow !important;
+$black:   black !important;
+$white:   white !important;
+
+// ---------------------------------------------------------
+
+html.highcontrast {
+  font-size: 70%;
+}
+
+body{
+  color: $white;
+  background-color: $black;
+}
+
+[data-theme-switcher].active {
+  color: $yellow;
+}
+
+nav {
+  li {
+    border-color: $yellow;
+  }
+}
+
+a {
+  color: $yellow;
+}
+
+p, .instruction {
+  color: $white;
+}
