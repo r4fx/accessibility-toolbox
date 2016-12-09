@@ -103,28 +103,48 @@ var accessibility = {
         SHOW HIDDEN SECOND LEVEL MENU ON TAB SWITCH
     */
 
-    hoveredMenu: function () {
-        var mainMenu = document.getElementsByClassName('main-menu');
+    hoveredNav: function () {
+        var mainNav = document.querySelector('.main-nav');
 
-        mainMenu.addEventListener('focus blur', function (event) {
+        function focusAndBlurHandler(event) {
             if (event.target.matches('a')) {
-                // todo: remove $
-                var $elem = $(this);
-                var $secondLevel = $elem.closest('ul').siblings('a').parent('li');
+                var focusedElement = event.target;
+                var focusedElementParent = focusedElement.parentElement;
+                var secondLevel = focusedElement.closest('ul');
+                var secondLevelParent = secondLevel.parentElement;
 
-                setTimeout(function () {
-                    $secondLevel.toggleClass('hover', $elem.is(":focus"));
-                    $elem.toggleClass("focused", $elem.is(":focus"));
-                }, 0);
+                focusedElement.classList.add('focused');
+
+                if (focusedElementParent.tagName == 'LI'){
+                    focusedElementParent.classList.add('hover');
+                }
+
+                if (secondLevelParent.tagName == 'LI'){
+                    focusedElementParent.classList.add('hover');
+                }
+
+                focusedElement.addEventListener('blur', function () {
+                    focusedElement.classList.remove('focused');
+
+                    if (!focusedElementParent.nextElementSibling){
+                        secondLevelParent.classList.remove('hover');
+                    }
+
+                    if (secondLevelParent.tagName == 'LI'){
+                        focusedElementParent.classList.remove('hover');
+                    }
+                }, true);
 
                 event.stopPropagation();
             }
-        });
+        }
+
+        mainNav.addEventListener('focus', focusAndBlurHandler, true);
     },
 
     init: function () {
         this.tabMenu();
-        //this.hoveredMenu();
+        this.hoveredNav();
     }
 };
 

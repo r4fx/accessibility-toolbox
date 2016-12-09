@@ -1,0 +1,66 @@
+.main-nav{
+  margin: 0;
+  padding-top: 8px;
+  width: 100%;
+
+  > li{
+    position: relative;
+
+    > a{
+      padding: 0 15px;
+    }
+
+    &:hover,
+    &.hover,
+    a:focus{
+      background-color: #eee;
+
+      ul,
+      + ul{
+        visibility: visible;
+        opacity: 1;
+      }
+    }
+
+    &.active,
+    &:hover{
+      > a {
+        color: black;
+      }
+    }
+
+    ul{
+      z-index: 10000;
+      margin: 0;
+      opacity: 0;
+      visibility: hidden;
+      position: absolute;
+      left: 0;
+      background-color: #eee;
+      padding: 5px 15px;
+      text-align: left;
+      min-width: 200px;
+
+      li{
+        margin-bottom: 5px;
+        line-height: normal;
+        display: block;
+        font-size: 1.6rem;
+
+        &:last-child{
+          margin-bottom: 0;
+        }
+      }
+
+      a{
+        display: inline-block;
+        padding: 5px 0;
+      }
+
+      li.active a,
+      a:hover{
+        color: black;
+      }
+    }
+  }
+}

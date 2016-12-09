@@ -64,6 +64,13 @@ ul {
   text-align: center;
 }
 
+ul.list-inline{
+
+  li{
+    display: inline-block;
+  }
+}
+
 .instruction{
   border: 1px solid #ccc;
   padding: 25px 25px 25px 50px;
