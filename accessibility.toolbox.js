@@ -14,6 +14,7 @@ var theme = (function () {
         if (currentTheme) {
             var themeCssLink = document.querySelector('link[title="' + currentTheme + '"]');
 
+            document.querySelector('html').classList.add(currentTheme);
             themeCssLink.disabled = true;
             themeCssLink.disabled = false;
             themeIsSet = true;
